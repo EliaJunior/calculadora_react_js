@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column; /* Define que os elementos dentro do container serão dispostos em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  height: 100vh; /* Altura total da viewport */
+}
+
+.Calculadora {
+  width: 250px;
+  height: 430px; /* Ajuste a altura conforme necessário */
+  background-color: black;
+  margin-bottom: 20px; /* Espaço entre a calculadora e a tela */
+  border-radius: 15px;
+}
+
+.versao {
+  width: 250px;
+  height: 20px; /* Altura da tela da calculadora */
+  background-color: gray;
+  border: 10px solid black; /* Espessura da borda e cor */
+  border-radius: 12px;
+  text-align: left; /* Alinha o texto à direita */
+  padding: 10px; /* Adiciona espaço interno para o texto não ficar colado na borda */
+  box-sizing: border-box; /* Mantém o padding dentro do tamanho especificado */
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  justify-content: center; /* Alinha o conteúdo no final do eixo principal (horizontalmente) */
+  align-items: flex-start; /* Alinha o conteúdo no final do eixo secundário (verticalmente) */
+  flex-direction: column; /* Coloca os itens em coluna */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.madeBy {
+  width: 250px;
+  height: 20px; /* Altura da tela da calculadora */
+  background-color: gray;
+  border: 10px solid black; /* Espessura da borda e cor */
+  border-radius: 12px;
+  text-align: left; /* Alinha o texto à direita */
+  padding: 10px; /* Adiciona espaço interno para o texto não ficar colado na borda */
+  box-sizing: border-box; /* Mantém o padding dentro do tamanho especificado */
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  justify-content: center; /* Alinha o conteúdo no final do eixo principal (horizontalmente) */
+  align-items: flex-start; /* Alinha o conteúdo no final do eixo secundário (verticalmente) */
+  flex-direction: column; /* Coloca os itens em coluna */
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.madeBy a {
+  color: inherit; /* Mantém a cor do link igual ao texto ao redor */
+  text-decoration: none; /* Remove a sublinhado do link */
+}
+
+.madeBy a:hover {
+  text-decoration: underline; /* Garante que a decoração não apareça ao passar o mouse */
+}
+
+.Tela {
+  width: 250px;
+  height: 120px; /* Altura da tela da calculadora */
+  background-color: whitesmoke;
+  border: 10px solid black; /* Espessura da borda e cor */
+  border-radius: 20px;
+  text-align: right; /* Alinha o texto à direita */
+  padding: 5px; /* Adiciona espaço interno para o texto não ficar colado na borda */
+  box-sizing: border-box; /* Mantém o padding dentro do tamanho especificado */
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  justify-content: flex-end; /* Alinha o conteúdo no final do eixo principal (horizontalmente) */
+  align-items: flex-end; /* Alinha o conteúdo no final do eixo secundário (verticalmente) */
+  flex-direction: column; /* Coloca os itens em coluna */
+}
+
+/* Estilos para os botões */
+.Buttons {
+  display: grid; /* Layout em grid para os botões */
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas com largura igual */
+  gap: 10px; /* Espaço entre os botões */
+  padding: 10px; /* Espaçamento interno */
+}
+
+.Buttons button {
+  width: 100%; /* Largura total do container */
+  height: 50px; /* Altura dos botões */
+  font-size: 18px; /* Tamanho da fonte */
+  background-color: #f0f0f0; /* Cor de fundo */
+  border: 1px solid #ccc; /* Borda com cor cinza */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+}
+
+.Buttons button:hover {
+  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.Buttons button:active {
+  background-color: #d0d0d0; /* Cor de fundo ao clicar */
+}
+
+.Buttons .AC {
+  background-color: red;
+  border: red;
+  color: white;
+}
+
+.Buttons .igual {
+  background-color: blue;
+  color: white;
+  border:  blue;
+}
+
+.Buttons .operador {
+  background-color: goldenrod;
+  border: goldenrod;
 }
